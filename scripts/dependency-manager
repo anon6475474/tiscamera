@@ -118,11 +118,9 @@ def install_packages(package_list: list, yes: bool = False, dry: bool = False):
     """
 
     cmd = ["apt-get", "install"]
-    if yes:
-        cmd.append("-y")
+    cmd.append("-y")
 
-    if dry:
-        cmd.append("--dry-run")
+    cmd.append("--dry-run")
 
     cmd2 = cmd + package_list
 
